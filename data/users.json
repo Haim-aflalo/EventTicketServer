@@ -1,0 +1,30 @@
+[
+  {
+    "username": "admin_master",
+    "password": "1234"
+  },
+  {
+    "username": "field_ops_01",
+    "password": "secure_pass_2025"
+  },
+  {
+    "username": "intel_analyst",
+    "password": "top_secret_shhh"
+  },
+  {
+    "username": "support_tech",
+    "password": "password123456"
+  },
+  {
+    "username": "guest_viewer",
+    "password": "temporary_access_99"
+  },
+  {
+    "username": "master",
+    "password": "papa"
+  },
+  {
+    "username": "y",
+    "password": "1234"
+  }
+]

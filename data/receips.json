@@ -1,0 +1,17 @@
+[
+  {
+    "username": "y",
+    "eventName": "string",
+    "ticketsBought": 1
+  },
+  {
+    "username": "y",
+    "eventName": "string",
+    "ticketsBought": 1
+  },
+  {
+    "username": "master",
+    "eventName": "string",
+    "ticketsBought": 1
+  }
+]

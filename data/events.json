@@ -1,0 +1,20 @@
+[
+  {
+    "eventName": "y",
+    "ticketsForSale": 2,
+    "username": "string",
+    "password": "string"
+  },
+  {
+    "eventName": "y",
+    "ticketsForSale": 2,
+    "username": "string",
+    "password": "string"
+  },
+  {
+    "eventName": "master",
+    "ticketsForSale": 2,
+    "username": "string",
+    "password": "string"
+  }
+]

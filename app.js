@@ -1,13 +1,15 @@
 import express from 'express';
-import { userRouter } from './routes/users.js';
+import { userRouter } from './routes/user.js';
+import { usersRouter } from './routes/users.js';
 import { eventRouter } from './routes/events.js';
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use('/users', userRouter);
+app.use('/user', userRouter);
 app.use('/creator', eventRouter);
+app.use('/users', usersRouter);
 
 app.listen(port, function (err) {
   if (err) console.log(err);

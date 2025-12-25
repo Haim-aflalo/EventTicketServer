@@ -1,32 +1,11 @@
 import express from 'express';
 import { read, write, hasSameProps } from '../utils/functions.js';
-import {
-  userObj,
-  ticketsObj,
-  usersPath,
-  receipsPath,
-  eventsPath,
-} from '../utils/consts.js';
-import { isNotLogged, userLogged } from '../utils/middleware.js';
+import { ticketsObj, receipsPath, eventsPath } from '../utils/consts.js';
+import { userLogged } from '../utils/middleware.js';
 
-export const userRouter = express();
+export const usersRouter = express();
 
-userRouter.post('/register', isNotLogged, async (req, res) => {
-  try {
-    const users = await read(usersPath);
-    const body = req.body;
-    if (hasSameProps(userObj, body)) {
-      users.push(req.body);
-      await write(usersPath, users);
-      return res.json({ message: 'User registered successfully' });
-    }
-    return res.status(409).send('The body provided does not correspond');
-  } catch (error) {
-    console.error('An error occurred: ' + error.message);
-  }
-});
-
-userRouter.post('/tickets/buy', userLogged, async (req, res) => {
+usersRouter.post('/tickets/buy', userLogged, async (req, res) => {
   try {
     const body = req.body;
     if (hasSameProps(ticketsObj, body)) {
@@ -58,7 +37,7 @@ userRouter.post('/tickets/buy', userLogged, async (req, res) => {
   }
 });
 
-userRouter.get('/:username/summary', async (req, res) => {
+usersRouter.get('/:username/summary', async (req, res) => {
   try {
     const result = { totalTicketsBought: 0, events: [] };
     const data = await read(receipsPath);

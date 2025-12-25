@@ -18,7 +18,7 @@ export async function userLogged(req, res, next) {
     (u) => u.username === body.username && u.password === body.password
   );
   if (!user) {
-    return res.status(401).send('Unhotorized');
+    return res.status(401).send('Unauthorized');
   }
   next();
 }
